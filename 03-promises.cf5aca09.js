@@ -5,4 +5,4 @@ var t,o=arguments[3];!function(o,i){"function"==typeof t&&t.amd?t([],function(){
 },{}],"GyVV":[function(require,module,exports) {
 "use strict";var e=require("notiflix/build/notiflix-notify-aio");function o(e,o){const t=Math.random()>.3;return new Promise((i,l)=>{setTimeout(()=>{t?i({pos:e,delay:o}):l({pos:e,delay:o})},o)})}const t=document.querySelector(".form");function i(t){t.preventDefault();let{delay:i,step:l,amount:s}=t.currentTarget;i=Number(i.value),l=Number(l.value),s=Number(s.value);for(let n=1;n<=s;n+=1)o(n,i).then(({pos:o,delay:t})=>{e.Notify.success(`Fulfilled promise ${o} in ${t}ms`),console.log(`✅ Fulfilled promise ${o} in ${t}ms`)}).catch(({pos:o,delay:t})=>{e.Notify.failure(`Rejected promise ${o} in ${t}ms`),console.log(`❌ Rejected promise ${o} in ${t}ms`)}),i+=l}t.addEventListener("submit",i);
 },{"notiflix/build/notiflix-notify-aio":"MeeU"}]},{},["GyVV"], null)
-//# sourceMappingURL=/parcel-project-template/03-promises.cf5aca09.js.map
+//# sourceMappingURL=/goit-js-hw-09/03-promises.cf5aca09.js.map
